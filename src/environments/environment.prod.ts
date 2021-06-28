@@ -1,3 +1,10 @@
+import {ApiRoutes} from "./api-routes";
+
 export const environment = {
-  production: true
+    name: 'production',
+    production: true,
+    api: {
+        base: `https://${location.hostname}/api/`,
+        routes: ApiRoutes
+    }
 };

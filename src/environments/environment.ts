@@ -2,8 +2,15 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import {ApiRoutes} from "./api-routes";
+
 export const environment = {
-  production: false
+    name: 'staging',
+    production: false,
+    api: {
+        base: `http://${location.hostname}/api/`,
+        routes: ApiRoutes
+    }
 };
 
 /*
