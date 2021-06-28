@@ -1,6 +1,6 @@
 <section>
     <div class="container">
-        <ng-container *ngIf="astronomyData; else astroDataNotLoaded">
+        <ng-container *ngIf="astronomyData && astronomyData.hdurl; else astroDataNotLoaded">
             <div class="row text-center">
                 <div class="col my-3">
                     <h1 class="display-6">Astronomy Picture of the Day</h1>
@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col">
                     <div class="card mb-3">
-                        <img [src]="astronomyData.hdurl" class="card-img-top" [alt]="astronomyData.title">
+                        <img [alt]="astronomyData.title" [src]="astronomyData.hdurl" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">{{astronomyData.title}}</h5>
                             <p class="card-text">{{astronomyData.explanation}}</p>
@@ -21,9 +21,11 @@
             </div>
         </ng-container>
         <ng-template #astroDataNotLoaded>
-            <div class="row text-center">
-                <div class="col">
-
+            <div class="row vh-70 text-center justify-content-center align-items-center">
+                <div class="col p-5">
+                    <div class="spinner-border text-danger p-5" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
                 </div>
             </div>
         </ng-template>
