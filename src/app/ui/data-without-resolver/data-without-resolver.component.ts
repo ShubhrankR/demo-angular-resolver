@@ -25,7 +25,6 @@ export class DataWithoutResolverComponent implements OnInit {
     ngOnInit(): void {
         this.dataService.getAstronomyData().subscribe((response: NasaApodApiResponseModel) => {
             this.astronomyData = response;
-            console.log('resp =', response)
         }, (error: Error) => {
             console.error(error);
         })

@@ -2,6 +2,8 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {HomePageComponent} from "./home-page/home-page.component";
 import {DataWithoutResolverComponent} from "./data-without-resolver/data-without-resolver.component";
+import {DataWithResolverComponent} from "./data-with-resolver/data-with-resolver.component";
+import {DataFetcherResolver} from "../shared/resolvers/data-fetcher.resolver";
 
 const routes: Routes = [
     {
@@ -9,8 +11,15 @@ const routes: Routes = [
         component: HomePageComponent
     },
     {
-        path: 'planetary',
+        path: 'planetary/astronomy',
         component: DataWithoutResolverComponent
+    },
+    {
+        path: 'planetary/mars',
+        component: DataWithResolverComponent,
+        resolve: {
+            data: DataFetcherResolver
+        }
     }
 ];
 

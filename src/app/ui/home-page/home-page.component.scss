@@ -1,23 +1,7 @@
 .pill-left-side {
-  border: 5px solid blueviolet;
-  border-radius: 500px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: blueviolet;
-    color: white;
-    border: 5px solid #212529;
-  }
+  border-radius: 5rem;
 }
 
 .pill-right-side {
-  border: 5px solid crimson;
-  border-radius: 500px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: crimson;
-    color: white;
-    border: 5px solid #212529
-  }
+  border-radius: 5rem;
 }
