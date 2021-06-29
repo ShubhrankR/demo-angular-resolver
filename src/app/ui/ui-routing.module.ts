@@ -18,7 +18,7 @@ const routes: Routes = [
         path: 'planetary/mars',
         component: DataWithResolverComponent,
         resolve: {
-            data: DataFetcherResolver
+            astronomyData: DataFetcherResolver
         }
     }
 ];

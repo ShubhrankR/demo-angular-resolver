@@ -26,11 +26,11 @@ export class DataWithResolverComponent implements OnInit {
 
     ngOnInit(): void {
         this.activatedRoute.data.subscribe((data) => {
-            this.astronomyData = data.data;
+            this.astronomyData = data.astronomyData;
         }, (error: Error) => {
             console.error(error);
         });
-        console.log('Resolved data via snapshot =', this.activatedRoute.snapshot.data.data);
+        console.log('Resolved data via snapshot =', this.activatedRoute.snapshot.data.astronomyData);
     }
 
 }
