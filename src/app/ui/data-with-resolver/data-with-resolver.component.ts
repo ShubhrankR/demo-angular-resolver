@@ -32,5 +32,4 @@ export class DataWithResolverComponent implements OnInit {
         });
         console.log('Resolved data via snapshot =', this.activatedRoute.snapshot.data.astronomyData);
     }
-
 }
